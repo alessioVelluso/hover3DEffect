@@ -22,6 +22,7 @@ USE IT:
 
 
 const hover3DEffect = (target, degrees) => {
+    target.style.transition = '150ms transform ease';
   target.addEventListener('mousemove', e => {
     const targetXPosition = e.target.getBoundingClientRect().left;
     const targetYPosition = e.target.getBoundingClientRect().top;
