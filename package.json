@@ -1,0 +1,12 @@
+{
+  "name": "hover3deffect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hover3DEffect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alessio Velluso",
+  "license": "ISC"
+}
