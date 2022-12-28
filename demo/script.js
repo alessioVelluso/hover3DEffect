@@ -33,4 +33,4 @@ const hover3DEffect = (target, degrees) => {
 }
 
 
-hover3DEffect(logo, 50);
+hover3DEffect(logo, 20);
