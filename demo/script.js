@@ -6,6 +6,7 @@ otherwise copy and past the full function */
 const logo = document.querySelector('.logo');
 
 const hover3DEffect = (target, degrees) => {
+    target.style.transition = '150ms transform ease';
     target.addEventListener('mousemove', e => {
       const targetXPosition = e.target.getBoundingClientRect().left;
       const targetYPosition = e.target.getBoundingClientRect().top;
@@ -32,4 +33,4 @@ const hover3DEffect = (target, degrees) => {
 }
 
 
-hover3DEffect(logo, 20);
+hover3DEffect(logo, 50);
