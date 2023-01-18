@@ -21,13 +21,13 @@ USE IT:
 /* ----------------------------------------------------------------- */
 
 
-const hover3DEffect = (target, degrees, view = '2000px') => {
+const hover3DEffect = (target, degrees = 20, view = '2000px') => {
   let transitioning = false;
   target.parentElement.style.perspective = view
   target.style.transition = '150ms transform ease';
 
   target.addEventListener('mousemove', e => {
-    if (transitioning) return;
+    //if (transitioning) return;
     // When leaving mouse, this become true for a while so there's no evident bug
 
     const targetXPosition = e.target.getBoundingClientRect().left;

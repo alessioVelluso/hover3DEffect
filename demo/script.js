@@ -5,13 +5,13 @@ otherwise copy and past the full function */
 
 const logo = document.querySelector('.logo'); //MUST BE INSIDE A CONTAINER
 
-const hover3DEffect = (target, degrees, view = '2000px') => {
+const hover3DEffect = (target, degrees = 20, view = '2000px') => {
   let transitioning = false;
   target.parentElement.style.perspective = view
   target.style.transition = '150ms transform ease';
 
   target.addEventListener('mousemove', e => {
-    if (transitioning) return;
+    //if (transitioning) return;
     // When leaving mouse, this become true for a while so there's no evident bug
 
     const targetXPosition = e.target.getBoundingClientRect().left;
@@ -36,7 +36,8 @@ const hover3DEffect = (target, degrees, view = '2000px') => {
     transitioning = true;
     setTimeout(() => transitioning = false, 250); // Avoid any evident bug;
 
-    setTimeout(() => target.style.transform  = `rotateX(0deg) rotateY(0deg)`, 50)
+    setTimeout(() => target.style.transform  = `rotateX(0deg) rotateY(0deg)`, 50);
+    //timeout for helping avoiding bad effects
   });
 }
 
