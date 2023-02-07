@@ -28,8 +28,7 @@ const hover3DEffect = (target, degrees = 20, view = '2000px') => {
       }
       target.style.transform  = `rotateY(${(effect.x)}deg) rotateX(${-(effect.y)}deg)`
     }
-    rotateElement(); // Rotate based on the degrees that the dev wants
-    console.log('Over');  
+    rotateElement(); // Rotate based on the degrees that the dev wants 
   });
   
   target.addEventListener ('mouseleave', () => {
