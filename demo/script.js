@@ -11,7 +11,7 @@ const hover3DEffect = (target, degrees = 20, view = '2000px') => {
   target.style.transition = '150ms transform ease';
 
   target.addEventListener('mousemove', e => {
-    //if (transitioning) return;
+    if (transitioning) return;
     // When leaving mouse, this become true for a while so there's no evident bug
 
     const targetXPosition = e.target.getBoundingClientRect().left;
@@ -29,7 +29,7 @@ const hover3DEffect = (target, degrees = 20, view = '2000px') => {
       target.style.transform  = `rotateY(${(effect.x)}deg) rotateX(${-(effect.y)}deg)`
     }
     rotateElement(); // Rotate based on the degrees that the dev wants
-      
+    console.log('Over');  
   });
   
   target.addEventListener ('mouseleave', () => {
